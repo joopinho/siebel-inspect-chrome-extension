@@ -1,0 +1,27 @@
+.jjj-inspect-grp{
+	width: 300px;
+}
+.jjj-popup-btn{
+	width: 32px;
+	height: 32px;
+	border: none;
+	padding: 8px 8px 8px 8px;
+	float: left;
+}
+.jjj-inspect-popup-btn{
+	background: url("inspect_32.png");
+}
+.jjj-reload-inspect-popup-btn{
+	background: url("reload_inspect_32.png");
+}
+.jjj-inspect-hide{
+	display:none;
+}
+.inspect-ws-select-container{
+	float: left;
+	width: 200px;
+	padding: 12px 0 0 0;
+}
+.inspect-ws-select{
+	width: 100%;
+}	

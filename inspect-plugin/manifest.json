@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Joopinho Siebel Inspect Launcher",
+  "description": "Run Siebel Inspect on your undelivered DEV WS",
+  "version": "0.0.1",
+  "icons": {"128": "reload_inspect_128.png"},
+  "action":{
+	"default_popup": "popup.html"
+  },
+  "permissions": [
+        "scripting", "activeTab"
+   ],
+   "content_scripts": [{
+        "matches": ["https://*/siebel/app/*"],
+        "run_at": "document_idle",
+        "js": ["content.js"]
+    }],
+	"web_accessible_resources": [
+		{
+			"resources": ["injected.js", "jjj_inspect.css"],
+			"matches": ["https://siebel.your-company.com/*"]
+		}       
+    ]
+}

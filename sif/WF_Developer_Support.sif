@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   NAME="Siebel Repository"
+   UPDATED="12/29/2021 20:44:15"
+   UPDATED_BY="SADMIN"
+   CREATED="12/28/2021 23:34:10"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="RUS"
+	   LOCKED="Y"
+	   LOCKED_DATE="07/25/2022 10:19:32"
+	   NAME="JOOPINHO"
+	   UI_FREEZE="N"
+	   LOCKED_BY_NAME="SADMIN"
+	   UPDATED="07/25/2022 10:19:33"
+	   UPDATED_BY="SADMIN"
+	   CREATED="02/10/2022 16:52:43"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<WORKFLOW_PROCESS
+		   BUSINESS_OBJECT="Workspace"
+		   EDIT="Y"
+		   INACTIVE="N"
+		   NAME="JJJ Developer Support - Inspect: 0"
+		   PASS_BY_REF_HIERARCHY_ARGUMENT="N"
+		   PERSISTENT_FREQUENCY="N"
+		   PROCESS_NAME="JJJ Developer Support - Inspect"
+		   REPLICATION_LEVEL="None"
+		   RUNNABLE="N"
+		   STATE_MANAGEMENT_TYPE="STATEFUL"
+		   STATUS="COMPLETED"
+		   VERSION="0"
+		   WEB_SERVICE_ENABLED="N"
+		   WORKFLOW_MODE="SRVFLOW"
+		   UPDATED="06/01/2022 08:48:23"
+		   UPDATED_BY="SADMIN"
+		   CREATED="06/01/2022 08:48:23"
+		   CREATED_BY="SADMIN">
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="Error Code"
+			   UPDATED="06/01/2022 08:48:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="Error Message"
+			   UPDATED="06/01/2022 08:48:25"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:25"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Object Id"
+			   UPDATED="06/01/2022 08:48:25"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:25"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Process Instance Id"
+			   UPDATED="06/01/2022 08:48:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Siebel Operation Object Id"
+			   UPDATED="06/01/2022 08:48:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="IN"
+			   NAME="sName"
+			   UPDATED="06/01/2022 08:48:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r13*600 48 696 969*FillBgClr8*167641088*ArrowEnd1*1"
+			   NAME="End 0"
+			   TYPE="END"
+			   UPDATED="06/01/2022 08:48:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:29"
+			   CREATED_BY="SADMIN">
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="BCInvokeMethod"
+			   BUSINESS_SERVICE_NAME="SIA BC Utility Service"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r13*468 48 564 969*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Inspect WS"
+			   TYPE="TASK"
+			   UPDATED="06/01/2022 08:48:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:29"
+			   CREATED_BY="SADMIN">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*600 724*NPts1*22*P06*564 724*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 2"
+				   TO_STEP_NAME="End 0"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="06/01/2022 08:48:39"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:39"
+				   CREATED_BY="SADMIN">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Inspect WS"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*600 724*NPts1*22*P06*564 724*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 2"
+					   TO_STEP_NAME="End 0"
+					   UPDATED="06/01/2022 08:48:48"
+					   UPDATED_BY="SADMIN"
+					   CREATED="06/01/2022 08:48:48"
+					   CREATED_BY="SADMIN">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="BusComp Name"
+				   SEQUENCE="4"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Repository Workspace"
+				   UPDATED="06/01/2022 08:48:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Method Name"
+				   SEQUENCE="5"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="PreviewWS"
+				   UPDATED="06/01/2022 08:48:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="BCInvokeMethod"
+			   BUSINESS_SERVICE_NAME="SIA BC Utility Service"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r13*336 48 432 969*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Open WS"
+			   TYPE="TASK"
+			   UPDATED="06/01/2022 08:48:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:29"
+			   CREATED_BY="SADMIN">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*468 724*NPts1*22*P06*432 724*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 1"
+				   TO_STEP_NAME="Inspect WS"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="06/01/2022 08:48:39"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:39"
+				   CREATED_BY="SADMIN">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Open WS"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*468 724*NPts1*22*P06*432 724*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 1"
+					   TO_STEP_NAME="Inspect WS"
+					   UPDATED="06/01/2022 08:48:48"
+					   UPDATED_BY="SADMIN"
+					   CREATED="06/01/2022 08:48:48"
+					   CREATED_BY="SADMIN">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="BusComp Name"
+				   SEQUENCE="3"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Repository Workspace"
+				   UPDATED="06/01/2022 08:48:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Method Name"
+				   SEQUENCE="2"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="OpenWS"
+				   UPDATED="06/01/2022 08:48:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="Repository Workspace"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r13*204 48 300 969*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Query WS"
+			   OPERATION="QUERY"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="06/01/2022 08:48:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:29"
+			   CREATED_BY="SADMIN">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*336 724*NPts1*22*P06*300 724*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 0"
+				   TO_STEP_NAME="Open WS"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="06/01/2022 08:48:39"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:39"
+				   CREATED_BY="SADMIN">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query WS"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*336 724*NPts1*22*P06*300 724*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 0"
+					   TO_STEP_NAME="Open WS"
+					   UPDATED="06/01/2022 08:48:48"
+					   UPDATED_BY="SADMIN"
+					   CREATED="06/01/2022 08:48:48"
+					   CREATED_BY="SADMIN">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="S"
+				   NAME="S:Query WS10"
+				   OUTPUT_ARG="Repository Workspace"
+				   SEQUENCE="1"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Name]=&apos;&quot;+[&amp;sName]+&quot;&apos;&quot;"
+				   UPDATED="06/01/2022 08:48:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r12*84 48 180 969*FillBgClr8*167641088*ArrowEnd1*1"
+			   NAME="Start"
+			   TYPE="START"
+			   UPDATED="06/01/2022 08:48:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 08:48:29"
+			   CREATED_BY="SADMIN">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*204 724*NPts1*22*P06*168 724*ToHS1*08*ArrowEnd1*4"
+				   NAME="1"
+				   TO_STEP_NAME="Query WS"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="06/01/2022 08:48:39"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 08:48:39"
+				   CREATED_BY="SADMIN">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Start"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*204 724*NPts1*22*P06*168 724*ToHS1*08*ArrowEnd1*4"
+					   NAME="1"
+					   TO_STEP_NAME="Query WS"
+					   UPDATED="06/01/2022 08:48:47"
+					   UPDATED_BY="SADMIN"
+					   CREATED="06/01/2022 08:48:47"
+					   CREATED_BY="SADMIN">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+		</WORKFLOW_PROCESS>
+		<WORKFLOW_PROCESS
+		   EDIT="Y"
+		   INACTIVE="N"
+		   NAME="JJJ Developer Support - Query WS List: 0"
+		   PASS_BY_REF_HIERARCHY_ARGUMENT="N"
+		   PERSISTENT_FREQUENCY="N"
+		   PROCESS_NAME="JJJ Developer Support - Query WS List"
+		   REPLICATION_LEVEL="None"
+		   RUNNABLE="N"
+		   STATE_MANAGEMENT_TYPE="STATEFUL"
+		   STATUS="COMPLETED"
+		   VERSION="0"
+		   WEB_SERVICE_ENABLED="N"
+		   WORKFLOW_MODE="SRVFLOW"
+		   UPDATED="06/01/2022 17:12:24"
+		   UPDATED_BY="SADMIN"
+		   CREATED="06/01/2022 17:12:24"
+		   CREATED_BY="SADMIN">
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="Error Code"
+			   UPDATED="06/01/2022 17:12:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="Error Message"
+			   UPDATED="06/01/2022 17:12:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Object Id"
+			   UPDATED="06/01/2022 17:12:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Process Instance Id"
+			   UPDATED="06/01/2022 17:12:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Siebel Operation Object Id"
+			   UPDATED="06/01/2022 17:12:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="PROPSET_CHILD"
+			   INOUT="OUT"
+			   NAME="hSM"
+			   UPDATED="06/01/2022 17:12:26"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:26"
+			   CREATED_BY="SADMIN">
+			</WF_PROCESS_PROP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*360 84 456 1329*FillBgClr8*167641088*ArrowEnd1*1"
+			   NAME="End 0"
+			   TYPE="END"
+			   UPDATED="06/01/2022 17:12:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:29"
+			   CREATED_BY="SADMIN">
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="Query"
+			   BUSINESS_SERVICE_NAME="EAI Siebel Adapter"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*228 84 324 1329*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Query WS"
+			   TYPE="TASK"
+			   UPDATED="06/01/2022 17:12:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:29"
+			   CREATED_BY="SADMIN">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*360 1084*NPts1*22*P07*324 1084*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 0"
+				   TO_STEP_NAME="End 0"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="06/01/2022 17:12:38"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 17:12:38"
+				   CREATED_BY="SADMIN">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query WS"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*360 1084*NPts1*22*P07*324 1084*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 0"
+					   TO_STEP_NAME="End 0"
+					   UPDATED="06/01/2022 17:12:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="06/01/2022 17:12:44"
+					   CREATED_BY="SADMIN">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query WS30"
+				   OUTPUT_ARG="SiebelMessage"
+				   PROPERTY_NAME="hSM"
+				   SEQUENCE="3"
+				   TYPE="ARGUMENT"
+				   UPDATED="06/01/2022 17:12:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 17:12:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OutputIntObjectName"
+				   SEQUENCE="1"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="JJJ Workspace"
+				   UPDATED="06/01/2022 17:12:34"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 17:12:34"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SearchSpec"
+				   SEQUENCE="2"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Repository Repository.Name]=&apos;Siebel Repository&apos; AND [Repository Workspace.Owner By Id]=&apos;&quot;+GetProfileAttr(&apos;Me.Id&apos;) + &quot;&apos; AND [Repository Workspace.Build Branch Flag]=&apos;N&apos; AND [Repository Workspace.Status]&lt;&gt;&apos;Delivered&apos;&quot;"
+				   UPDATED="06/01/2022 17:12:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 17:12:35"
+				   CREATED_BY="SADMIN">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r13*84 84 180 1329*FillBgClr8*167641088*ArrowEnd1*1"
+			   NAME="Start"
+			   TYPE="START"
+			   UPDATED="06/01/2022 17:12:29"
+			   UPDATED_BY="SADMIN"
+			   CREATED="06/01/2022 17:12:29"
+			   CREATED_BY="SADMIN">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*228 1084*NPts1*22*P07*168 1084*ToHS1*08*ArrowEnd1*4"
+				   NAME="1"
+				   TO_STEP_NAME="Query WS"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="06/01/2022 17:12:38"
+				   UPDATED_BY="SADMIN"
+				   CREATED="06/01/2022 17:12:38"
+				   CREATED_BY="SADMIN">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Start"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*228 1084*NPts1*22*P07*168 1084*ToHS1*08*ArrowEnd1*4"
+					   NAME="1"
+					   TO_STEP_NAME="Query WS"
+					   UPDATED="06/01/2022 17:12:44"
+					   UPDATED_BY="SADMIN"
+					   CREATED="06/01/2022 17:12:44"
+					   CREATED_BY="SADMIN">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+		</WORKFLOW_PROCESS>
+	</PROJECT>
+</REPOSITORY>
+
+
+
